@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clínica Dental Arco — Odontología de precisión en Bogotá</title>
+  <meta name="description" content="Odontología estética y de precisión en Bogotá. Blanqueamiento, carillas de porcelana, ortodoncia e implantes. Agenda tu cita hoy — sin dolor garantizado." />
+  <meta property="og:title" content="Clínica Dental Arco — Tu sonrisa, nuestra firma" />
+  <meta property="og:description" content="Más de 2.000 pacientes con sonrisas transformadas. Tecnología de vanguardia y cero dolor en el norte de Bogotá." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            marino:  { DEFAULT: '#0C3547', light: '#1A5F7A', xlight: '#EAF3F7' },
+            bronce:  { DEFAULT: '#B8956A', light: '#D4B897', xlight: '#F7EEE1' },
+            hueso:   { DEFAULT: '#FAFAF7', dark: '#F0EDE4' },
+            slate:   { DEFAULT: '#52607A', light: '#8494A9' },
+            success: { DEFAULT: '#1A8A5E' },
+          },
+          fontFamily: {
+            display: ['"DM Serif Display"', 'Georgia', 'serif'],
+            body:    ['Inter', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Clínica Dental Arco",
+    "description": "Odontología estética y de precisión en Bogotá. Blanqueamiento, carillas de porcelana, ortodoncia e implantes dentales.",
+    "telephone": "<!-- TODO: teléfono real -->",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "<!-- TODO: dirección real -->",
+      "addressLocality": "Bogotá",
+      "addressRegion": "Cundinamarca",
+      "addressCountry": "CO"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": "<!-- TODO -->", "longitude": "<!-- TODO -->" },
+    "priceRange": "$$$",
+    "openingHoursSpecification": [
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"09:00","closes":"14:00"}
+    ]
+  }
+  </script>
+  <!-- TODO: insertar ID de medición GA4 del cliente -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"></script> -->
+</head>
+<body class="font-body bg-hueso text-marino overflow-x-hidden">
+
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido</a>
+
+  <!-- ══ HEADER ══ -->
+  <header id="header" class="fixed inset-x-0 top-0 z-50 transition-all duration-400">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#inicio" class="logo-wrap" aria-label="Clínica Dental Arco — inicio">
+        <span class="logo-name">Arco</span><span class="logo-tag">Dental</span>
+        <span class="logo-arc" aria-hidden="true"></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-9" aria-label="Menú principal">
+        <a href="#nosotros"  class="nav-link">Nosotros</a>
+        <a href="#servicios" class="nav-link">Servicios</a>
+        <a href="#agenda"    class="nav-link">Agenda</a>
+        <a href="#resenas"   class="nav-link">Reseñas</a>
+        <a href="#contacto"  class="nav-link">Contacto</a>
+        <a href="#agenda"    class="btn-nav" id="cta-nav-agendar">Agendar cita</a>
+      </nav>
+      <button id="menu-toggle" class="md:hidden p-2" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-marino border-t border-white/10" role="dialog" aria-modal="true">
+      <nav class="flex flex-col px-6 py-4 gap-1" aria-label="Menú móvil">
+        <a href="#nosotros"  class="mobile-link">Nosotros</a>
+        <a href="#servicios" class="mobile-link">Servicios</a>
+        <a href="#agenda"    class="mobile-link">Agenda</a>
+        <a href="#resenas"   class="mobile-link">Reseñas</a>
+        <a href="#contacto"  class="mobile-link">Contacto</a>
+        <a href="#agenda"    class="btn-nav mt-4 text-center block">Agendar cita</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido-principal">
+
+    <!-- ══ HERO ══ -->
+    <section id="inicio" class="hero-split" aria-label="Portada">
+      <div class="hero-split__left">
+        <div class="hero-split__content">
+          <p class="hero-eyebrow reveal-up">Odontología de precisión · Bogotá</p>
+          <h1 class="hero-headline reveal-up" style="animation-delay:.12s">
+            Tu sonrisa<br /><em>habla</em><br />antes que tú
+          </h1>
+          <p class="hero-sub reveal-up" style="animation-delay:.22s">
+            Diseñamos sonrisas que son tan únicas como tú. Tecnología de vanguardia,
+            trato cercano y resultados que no necesitan explicación.
+          </p>
+          <div class="flex flex-wrap gap-4 mt-9 reveal-up" style="animation-delay:.32s">
+            <a href="#agenda" class="btn-hero-pri" id="cta-hero-agendar">Agendar mi cita</a>
+            <a href="#servicios" class="btn-hero-ghost">Ver servicios</a>
+          </div>
+          <div class="hero-stats reveal-up" style="animation-delay:.42s">
+            <div class="hero-stat">
+              <p class="hero-stat__n"><span class="count-up" data-target="2000">0</span>+</p>
+              <p class="hero-stat__l">Pacientes</p>
+            </div>
+            <span class="hero-stat__sep" aria-hidden="true"></span>
+            <div class="hero-stat">
+              <p class="hero-stat__n"><span class="count-up" data-target="12">0</span></p>
+              <p class="hero-stat__l">Años de experiencia</p>
+            </div>
+            <span class="hero-stat__sep" aria-hidden="true"></span>
+            <div class="hero-stat">
+              <p class="hero-stat__n"><span class="count-up" data-target="98">0</span>%</p>
+              <p class="hero-stat__l">Satisfacción</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-split__right">
+        <div class="hero-split__frame">
+          <img
+            src="https://images.unsplash.com/photo-1588776814546-ec7e2a41f4c2?w=900&q=85&auto=format&fit=crop&crop=top"
+            alt="Paciente con sonrisa perfecta después de tratamiento en Clínica Dental Arco"
+            class="hero-split__img"
+            width="900" height="1100"
+          />
+          <div class="hero-badge" aria-hidden="true">
+            <svg class="w-5 h-5 text-marino flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            <div><p class="text-xs font-bold text-marino leading-none">Cero dolor</p><p class="text-[0.65rem] text-slate-light leading-none mt-0.5">Anestesia digital</p></div>
+          </div>
+        </div>
+        <div class="hero-arc-deco" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ══ NOSOTROS ══ -->
+    <section id="nosotros" class="py-28 bg-white scroll-mt-20" aria-label="Sobre Clínica Dental Arco">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div class="reveal-left">
+            <span class="tag-label">Nuestra historia</span>
+            <h2 class="section-heading mt-3 mb-6">
+              Tratamos bocas.<br /><span class="text-bronce italic">Cambiamos vidas.</span>
+            </h2>
+            <p class="text-slate leading-relaxed mb-5">
+              Desde 2012, la Clínica Dental Arco nació con una convicción clara: que ir al dentista no tiene que ser una experiencia difícil. Cada paciente merece diagnóstico preciso, tecnología de punta y un trato que lo haga sentir seguro.
+            </p>
+            <p class="text-slate leading-relaxed mb-10">
+              Trabajamos con rayos X digitales de baja radiación, escáner intraoral 3D y blanqueamiento LED de fotoaceleración. Porque la tecnología adecuada hace que los tratamientos sean más rápidos, menos invasivos y más precisos.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="cert-chip">Escáner intraoral 3D</span>
+              <span class="cert-chip">Rayos X digital</span>
+              <span class="cert-chip">Blanqueamiento LED</span>
+              <span class="cert-chip">Anestesia sin agujas</span>
+            </div>
+          </div>
+          <div class="reveal-right">
+            <div class="about-frame">
+              <img
+                src="https://images.unsplash.com/photo-1629909615184-74f495363b67?w=700&q=80&auto=format&fit=crop&crop=top"
+                alt="Equipo de especialistas de Clínica Dental Arco"
+                loading="lazy" width="700" height="820"
+                class="about-img"
+              />
+              <div class="about-badge">
+                <span class="about-badge__n font-display">12</span>
+                <span class="about-badge__l">años<br/>cuidando<br/>sonrisas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ SERVICIOS ══ -->
+    <section id="servicios" class="py-28 bg-hueso-dark scroll-mt-20" aria-label="Tratamientos odontológicos">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16 reveal-up">
+          <span class="tag-label">Lo que hacemos</span>
+          <h2 class="section-heading mt-3">Tratamientos que transforman</h2>
+          <p class="text-slate mt-4 max-w-xl mx-auto text-base">Sin apresurarse, sin excesos, sin dolor. Cada tratamiento diseñado para durar.</p>
+        </div>
+        <div class="services-grid">
+
+          <article class="svc-card reveal-up">
+            <div class="svc-icon" aria-hidden="true">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
+            </div>
+            <h3 class="svc-title">Blanqueamiento dental</h3>
+            <p class="svc-desc">Hasta 8 tonos más claro en una sola sesión con tecnología LED de fotoaceleración. Resultado visible e inmediato.</p>
+            <span class="svc-time">90 min</span>
+          </article>
+
+          <article class="svc-card svc-card--featured reveal-up" style="animation-delay:.1s">
+            <div class="svc-badge">Más solicitado</div>
+            <div class="svc-icon svc-icon--light" aria-hidden="true">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z"/></svg>
+            </div>
+            <h3 class="svc-title">Diseño de sonrisa</h3>
+            <p class="svc-desc">Carillas de porcelana ultrafinas que transforman forma, color y armonía. Mínima preparación dental, máximo impacto.</p>
+            <span class="svc-time">120 min</span>
+          </article>
+
+          <article class="svc-card reveal-up" style="animation-delay:.2s">
+            <div class="svc-icon" aria-hidden="true">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"/></svg>
+            </div>
+            <h3 class="svc-title">Ortodoncia</h3>
+            <p class="svc-desc">Brackets tradicionales y alineadores invisibles. Valoración inicial para definir el plan más eficiente para tu caso.</p>
+            <span class="svc-time">60 min valoración</span>
+          </article>
+
+          <article class="svc-card reveal-up" style="animation-delay:.1s">
+            <div class="svc-icon" aria-hidden="true">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/></svg>
+            </div>
+            <h3 class="svc-title">Implantes dentales</h3>
+            <p class="svc-desc">Raíces de titanio que reemplazan un diente perdido de forma natural y permanente. Primera valoración sin costo.</p>
+            <span class="svc-time">60 min valoración</span>
+          </article>
+
+          <article class="svc-card reveal-up" style="animation-delay:.2s">
+            <div class="svc-icon" aria-hidden="true">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 class="svc-title">Limpieza y profilaxis</h3>
+            <p class="svc-desc">Detartraje ultrasónico, pulido y fluorización. La base de una boca sana. Recomendada cada seis meses.</p>
+            <span class="svc-time">45 min</span>
+          </article>
+
+          <article class="svc-card svc-card--urgent reveal-up" style="animation-delay:.3s">
+            <div class="svc-icon svc-icon--accent" aria-hidden="true">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"/></svg>
+            </div>
+            <h3 class="svc-title">Urgencias dentales</h3>
+            <p class="svc-desc">Atención el mismo día para dolores agudos, fracturas, coronas caídas o cualquier emergencia. Llama y te damos cita hoy.</p>
+            <span class="svc-time">30 min</span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ AGENDA ══ -->
+    <section id="agenda" class="py-28 bg-marino scroll-mt-20" aria-label="Agendar cita online">
+      <div class="max-w-3xl mx-auto px-6">
+        <div class="text-center mb-12 reveal-up">
+          <span class="tag-label text-bronce">Reserva en línea</span>
+          <h2 class="font-display text-4xl md:text-5xl text-white mt-3 mb-3 leading-tight">
+            Agenda tu cita <em>ahora</em>
+          </h2>
+          <p class="text-white/55 text-base">
+            Selecciona tratamiento, fecha y hora. Confirmamos en menos de 2 horas.<br />
+            <span class="text-white/35 text-sm">Lun–Vie 8:00–18:00 · Sáb 9:00–14:00 · Dom cerrado</span>
+          </p>
+        </div>
+
+        <div class="agenda-card reveal-up">
+          <!-- Paso 1: Servicio -->
+          <div class="agenda-step" id="step-servicio">
+            <label class="step-label" for="sel-servicio">1 — ¿Qué tratamiento necesitas?</label>
+            <select id="sel-servicio" class="agenda-select">
+              <option value="">— Elige un servicio —</option>
+              <option value="45|Limpieza y profilaxis">Limpieza y profilaxis (45 min)</option>
+              <option value="90|Blanqueamiento dental">Blanqueamiento dental (90 min)</option>
+              <option value="60|Ortodoncia — valoración">Ortodoncia — valoración (60 min)</option>
+              <option value="60|Implantes — valoración">Implantes dentales — valoración (60 min)</option>
+              <option value="120|Diseño de sonrisa">Diseño de sonrisa / Carillas (120 min)</option>
+              <option value="30|Urgencia dental">Urgencia dental (30 min)</option>
+            </select>
+          </div>
+
+          <!-- Paso 2: Fecha -->
+          <div class="agenda-step hidden" id="step-fecha">
+            <label class="step-label" for="sel-fecha">2 — ¿Cuándo quieres venir?</label>
+            <input type="date" id="sel-fecha" class="agenda-input" />
+            <p class="step-hint">Atendemos Lun–Vie y Sáb por la mañana. Domingos cerrado.</p>
+          </div>
+
+          <!-- Paso 3: Slots -->
+          <div class="agenda-step hidden" id="step-slots">
+            <p class="step-label">3 — Elige tu horario</p>
+            <div id="slots-grid" class="slots-grid" role="group" aria-label="Horarios disponibles"></div>
+            <p id="slots-empty" class="step-hint text-bronce-light hidden">No hay horarios disponibles ese día. Por favor elige otra fecha.</p>
+          </div>
+
+          <!-- Paso 4: Formulario -->
+          <div class="agenda-step hidden" id="step-datos">
+            <p class="step-label">4 — Tus datos de contacto</p>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="ag-nombre">Nombre completo <span class="req" aria-hidden="true">*</span></label>
+                <input type="text" id="ag-nombre" placeholder="Tu nombre completo" autocomplete="name" required />
+              </div>
+              <div class="form-field">
+                <label for="ag-email">Correo electrónico <span class="req" aria-hidden="true">*</span></label>
+                <input type="email" id="ag-email" placeholder="correo@ejemplo.com" autocomplete="email" required />
+              </div>
+              <div class="form-field">
+                <label for="ag-tel">Teléfono / WhatsApp <span class="req" aria-hidden="true">*</span></label>
+                <input type="tel" id="ag-tel" placeholder="300 000 0000" autocomplete="tel" required />
+              </div>
+              <div class="form-field form-field--full">
+                <label for="ag-notas">Notas adicionales <span class="opt">(opcional)</span></label>
+                <input type="text" id="ag-notas" placeholder="¿Algún antecedente médico que debamos saber?" />
+              </div>
+            </div>
+            <p id="form-error" class="form-error hidden" role="alert"></p>
+            <button type="button" id="btn-confirmar" class="btn-agenda-submit">
+              Confirmar solicitud de cita
+            </button>
+            <p class="form-legal">Al agendar aceptas que nos contactemos para confirmar tu cita.</p>
+          </div>
+
+          <!-- Confirmación -->
+          <div id="step-confirm" class="agenda-confirm hidden" role="status" aria-live="polite">
+            <div class="confirm-check" aria-hidden="true">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <h3 class="confirm-title">¡Solicitud enviada!</h3>
+            <p id="confirm-resumen" class="confirm-msg"></p>
+            <p class="confirm-demo"><strong>(Demo)</strong> En producción recibirías un correo de confirmación y tu cita quedaría registrada en el sistema.</p>
+            <!-- PRODUCCIÓN: aquí se conectaría el endpoint POST /api/citas y el correo vía Resend -->
+            <button type="button" id="btn-reset" class="btn-reset">Agendar otra cita</button>
+          </div>
+
+          <!-- Mini-resumen de selección -->
+          <div id="agenda-resumen" class="resumen-bar hidden">
+            <span id="rsm-svc" class="resumen-pill"></span>
+            <span id="rsm-fecha" class="resumen-pill"></span>
+            <span id="rsm-hora" class="resumen-pill"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ RESEÑAS ══ -->
+    <section id="resenas" class="py-28 bg-white scroll-mt-20" aria-label="Reseñas de pacientes">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16 reveal-up">
+          <span class="tag-label">Testimonios</span>
+          <h2 class="section-heading mt-3">Lo que dicen nuestros pacientes</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <blockquote class="review-card reveal-up">
+            <div class="stars" aria-label="5 estrellas">★★★★★</div>
+            <p class="review-text">"Llegué con miedo al dentista y salí sonriendo de oído a oído. El procedimiento fue completamente sin dolor. Los recomiendo al mil por ciento."</p>
+            <footer class="review-author">— <!-- TODO --> María C. · <cite>Google</cite></footer>
+          </blockquote>
+          <blockquote class="review-card review-card--featured reveal-up" style="animation-delay:.1s">
+            <div class="stars" aria-label="5 estrellas">★★★★★</div>
+            <p class="review-text">"Me hice las carillas y el resultado es increíble. La gente me pregunta si son mis dientes naturales. El equipo es muy profesional y súper cercano."</p>
+            <footer class="review-author">— <!-- TODO --> Andrés M. · <cite>Google</cite></footer>
+          </blockquote>
+          <blockquote class="review-card reveal-up" style="animation-delay:.2s">
+            <div class="stars" aria-label="5 estrellas">★★★★★</div>
+            <p class="review-text">"El implante quedó perfecto. En otras clínicas me dieron presupuestos altísimos. Aquí el precio fue justo y el resultado, excelente. Volvería sin dudar."</p>
+            <footer class="review-author">— <!-- TODO --> Sandra P. · <cite>Google</cite></footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ CONTACTO ══ -->
+    <section id="contacto" class="py-28 bg-hueso-dark scroll-mt-20" aria-label="Contacto y ubicación">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div class="reveal-left">
+            <span class="tag-label">Encuéntranos</span>
+            <h2 class="section-heading mt-3 mb-10">Estamos aquí para ti</h2>
+            <div class="space-y-7">
+              <div class="info-row">
+                <div class="info-icon"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+                <div><p class="font-semibold text-marino mb-0.5">Dirección</p><p class="text-slate"><!-- TODO: dirección real -->, Bogotá, Colombia</p></div>
+              </div>
+              <div class="info-row">
+                <div class="info-icon"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+                <div>
+                  <p class="font-semibold text-marino mb-1">Horarios</p>
+                  <p class="text-slate">Lunes a Viernes: 8:00 – 18:00</p>
+                  <p class="text-slate">Sábados: 9:00 – 14:00</p>
+                  <p class="text-slate">Domingos: Cerrado</p>
+                </div>
+              </div>
+              <div class="info-row">
+                <div class="info-icon"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div>
+                <div><p class="font-semibold text-marino mb-0.5">Teléfono</p><a href="tel:+57XXXXXXXXXX" class="text-bronce font-medium hover:text-bronce-light transition-colors" id="cta-tel"><!-- TODO: número real --></a></div>
+              </div>
+            </div>
+            <div class="mt-10 flex flex-wrap gap-4">
+              <a href="https://wa.me/57XXXXXXXXXX?text=Hola%2C%20vengo%20de%20la%20web%20de%20Cl%C3%ADnica%20Dental%20Arco%20y%20quiero%20informaci%C3%B3n" class="btn-whatsapp" id="cta-whatsapp-contacto" aria-label="Escribir por WhatsApp">
+                <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Escribir por WhatsApp
+              </a>
+              <a href="tel:+57XXXXXXXXXX" class="btn-outline" id="cta-llamar">Llamar ahora</a>
+            </div>
+          </div>
+          <div class="reveal-right">
+            <div class="map-placeholder" role="img" aria-label="Mapa de ubicación pendiente">
+              <svg class="w-14 h-14 text-marino/20 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+              <p class="text-marino/30 text-sm"><!-- TODO: iframe de Google Maps --></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="bg-marino-light py-14 px-6" role="contentinfo">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+        <div class="md:col-span-2">
+          <p class="font-display text-3xl text-white">Arco<em class="text-bronce not-italic"> Dental</em></p>
+          <p class="text-white/40 text-sm max-w-xs leading-relaxed mt-3">Odontología de precisión en Bogotá. Tu sonrisa merece el mejor cuidado.</p>
+        </div>
+        <div>
+          <p class="text-white/55 text-xs uppercase tracking-widest font-semibold mb-4">Horarios</p>
+          <p class="text-white/40 text-sm">Lun – Vie: 8:00 – 18:00</p>
+          <p class="text-white/40 text-sm">Sáb: 9:00 – 14:00</p>
+          <p class="text-white/40 text-sm">Dom: Cerrado</p>
+        </div>
+        <div>
+          <p class="text-white/55 text-xs uppercase tracking-widest font-semibold mb-4">Redes</p>
+          <div class="flex gap-4">
+            <a href="#" class="social-link" aria-label="Instagram"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a href="#" class="social-link" aria-label="Facebook"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-white/25 text-xs">
+        <p>© 2024 Clínica Dental Arco. Todos los derechos reservados.</p>
+        <p>DEMO · <!-- TODO: datos reales del cliente --></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp FAB -->
+  <a href="https://wa.me/57XXXXXXXXXX?text=Hola%2C%20vengo%20de%20la%20web%20de%20Cl%C3%ADnica%20Dental%20Arco" class="whatsapp-fab" id="cta-whatsapp-fab" aria-label="Abrir WhatsApp">
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
